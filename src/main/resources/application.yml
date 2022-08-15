@@ -1,0 +1,30 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/QALair/rest-configServer
+          default-label: main
+          search-paths:
+            - 'greeting-service*'
+  security:
+    ignored: /**
+
+#server:
+#  port: 8888
+#spring:
+#  application:
+#    name: config-server
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/QALair/rest-configServer
+#          default-label: main
+#          search-paths:
+#            - 'greeting-service*'
+#      enabled: true
